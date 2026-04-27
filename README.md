@@ -73,11 +73,11 @@ O sistema estará disponível em http://localhost:3000.
 5. Divisão do Trabalho em Equipe 👥
 
 Código:
-[João Victor Ferreira Cantanhede Nogueira]: Liderança técnica, integração Front-end (Next.js) e consumo da API.
+[João Victor Ferreira Cantanhede Nogueira]: 
 
 Montagem do slide:
-[Rafael Yori]: Desenvolvimento da API em FastAPI e serialização do modelo.
-[Pedro Henrique Carvalho de Oliveira]: Configuração de infraestrutura e Deploy da aplicação.
+[Rafael Yori]
+[Pedro Henrique Carvalho de Oliveira]
 
 Montagem do README:
 [Leonardo Gustavo Machado Campos]
