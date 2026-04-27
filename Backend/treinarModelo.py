@@ -17,7 +17,7 @@ except FileNotFoundError:
     print("❌ Erro: O arquivo não foi encontrado.")
     exit()
 
-df['situacao_risco'] = (df['G3'] < 10).astype(int)
+df['situacao_risco'] = (df['G3'] < 7).astype(int)
 
 
 X = df[['studytime', 'failures', 'absences', 'G1', 'G2']]
@@ -31,7 +31,6 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 # 6. Treinar a Rede Neural MLP
-# Aumentei um pouco as camadas para lidar com os dados reais
 modelo = MLPClassifier(
     hidden_layer_sizes=(16, 8), 
     max_iter=2000,              
