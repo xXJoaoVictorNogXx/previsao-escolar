@@ -1,10 +1,20 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
-# 1. Carrega os arquivos gerados pelo treinamento
-modelo = joblib.load('modelo_mlp.pkl')
-scaler = joblib.load('scaler.pkl')
+# Descobre a pasta exata onde este arquivo app.py está rodando
+PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
+
+# Monta o caminho completo para os arquivos .pkl
+caminho_modelo = os.path.join(PASTA_ATUAL, 'modelo_mlp.pkl')
+caminho_scaler = os.path.join(PASTA_ATUAL, 'scaler.pkl')
+
+# 1. Carrega os arquivos gerados pelo treinamento com o caminho seguro
+modelo = joblib.load(caminho_modelo)
+scaler = joblib.load(caminho_scaler)
+
+# ... (resto do seu código continua normal daqui pra baixo)
 
 st.set_page_config(page_title="EducaPrev Dashboard", page_icon="📊", layout="wide")
 
